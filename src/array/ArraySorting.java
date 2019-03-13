@@ -26,20 +26,18 @@ public class ArraySorting {
   public static int[] selectionSort(int[] array) {
     //outer loop runs through the entire array
     for(int i = 0; i < array.length; i++) {
-      int min = i;
+      int lowestValueIndex = i;
       
-      //the inner loop compares each value at the outer loop's
-      //index to the value at the inner loop's index, if
-      //the outer index value is greater then swap it with the
-      //inner index value
+      //the inner loop checks the rest of the array for the
+      //smallest possible value and swaps it towards the front
       for(int j = i + 1; j < array.length;j++) {
-        if(array[min] > array[j])
-          min = j;
+        if(array[lowestValueIndex] > array[j])
+          lowestValueIndex = j;
       }
       
       int temp = array[i];
-      array[i] = array[min];
-      array[min] = temp;
+      array[i] = array[lowestValueIndex];
+      array[lowestValueIndex] = temp;
     }
     
     //the larger numbers have continuously been swapped further down
@@ -47,4 +45,26 @@ public class ArraySorting {
     return array;
   }
 
+  //O(n^2) time
+  public static int[] insertionSort(int[] array) {
+    //outer loop begins with the second element and
+    //loops to the end of the array, each pass is finding
+    //where in the array the value needs to be placed
+    for(int i = 1; i < array.length; i++) {
+      int j = i;
+      int valueToInsert = array[i];
+      
+      //looping backwards, every element is shifted up one
+      //space until the previous element is no longer larger
+      while(j > 0 && array[j-1] > valueToInsert) {
+        array[j] = array[--j];
+      }
+      
+      //the value is then inserted
+      array[j] = valueToInsert;
+    }
+    
+    return array;
+  }
+  
 }

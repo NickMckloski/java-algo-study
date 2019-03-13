@@ -1,3 +1,4 @@
+package utilities;
 public class Utilities {
   
   public static void printArray(int[] array) {
