@@ -1,7 +1,9 @@
 import array.ArraySearching;
 import array.ArraySorting;
+import array.ArrayUtilities;
 import datastructures.DynamicArray;
-import utilities.Utilities;
+import problems.FindingSubstrings;
+import problems.PrimeNumbers;
 
 class Main {
 
@@ -43,7 +45,10 @@ class Main {
 //    System.out.println("size "+dynamicArray.size());
     
     //compute the highest prime number in n
-    System.out.println(Utilities.findHighestPrime(787));
+    //System.out.println(PrimeNumbers.findHighestPrime(787));
+    
+    //find longest substring
+    System.out.println(FindingSubstrings.longestSubstring("ABBA", "ABCABA"));
   }
 
 }

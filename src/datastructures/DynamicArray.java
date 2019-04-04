@@ -2,7 +2,7 @@ package datastructures;
 
 import java.util.Arrays;
 
-import utilities.Utilities;
+import array.ArrayUtilities;
 
 //this is an implementation of a dynamic array (like ArrayList)
 public class DynamicArray<T> {
@@ -51,7 +51,7 @@ public class DynamicArray<T> {
   
   //prints the current filled array, ignores extra space
   public void print() {
-    Utilities.printArray(Arrays.copyOfRange(array, 0, size));
+    ArrayUtilities.printArray(Arrays.copyOfRange(array, 0, size));
   }
   
   //adds an element to the array
