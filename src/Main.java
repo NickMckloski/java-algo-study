@@ -48,7 +48,7 @@ class Main {
     //System.out.println(PrimeNumbers.findHighestPrime(787));
     
     //find longest substring
-    System.out.println(FindingSubstrings.longestSubstring("ABBA", "ABCABA"));
+    System.out.println(FindingSubstrings.longestSubsequence("ABBA", "ABCABA"));
   }
 
 }
